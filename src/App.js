@@ -13,7 +13,7 @@ function App() {
         <Header />
         <Hero />
         <Route path="/" exact component={Home} />
-        <Route path="/post/:postId" component={Post} />
+        <Route path="/post/:slug" component={Post} />
         <Route path="/contactus" component={ContactUs} />
       </div>
     </Router>

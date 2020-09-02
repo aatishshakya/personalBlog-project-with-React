@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 import Card from "../../components/UI/card";
 import BlogPost from "../../components/BlogPost";
-import SideBar from "../../components/SideBar";
+
 import Layout from "../../components/Layout";
 
 const Post = (props) => {

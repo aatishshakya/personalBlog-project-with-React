@@ -3,6 +3,7 @@ import "./style.css";
 import Card from "../UI/card";
 import blogPost from "../../data/blog.json";
 import { NavLink } from "react-router-dom";
+import Logo from "../Logo";
 const SideBar = (props) => {
   const [posts, setPosts] = useState([]);
 
@@ -16,10 +17,11 @@ const SideBar = (props) => {
         <div className="cardHeader">
           <span>About Us</span>
           <div className="profileImageContainer">
-            <img
+            <Logo style={{ height: "100%", width: "100%" }} />
+            {/* <img
               alt="Aatish Shakya"
               src={require("../../Images/About/aatish.jpg")}
-            />
+            /> */}
           </div>
           <div className="cardBody">
             <p className="personalBio">
@@ -38,7 +40,7 @@ const SideBar = (props) => {
           <h3>Recent Posts </h3>
           {posts.map((post) => {
             return (
-              <NavLink key={post.id} to={`/post/${post.id}`}>
+              <NavLink key={post.id} to={`/post/${post.slug}`}>
                 <div className="recentPost">
                   <h3>{post.blogTitle}</h3>
                   <span>{post.postedOn}</span>

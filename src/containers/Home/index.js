@@ -27,18 +27,12 @@ const ImageGallery = (props) => {
       </section>
 
       <section className="sideImageWrapper" style={{ width: props.smallWidth }}>
-        <SideImage
-          height={props.sideImageHeight}
-          src={require("../../Images/blogPostImages/" + props.images[1])}
-        />
-        <SideImage
-          height={props.sideImageHeight}
-          src={require("../../Images/blogPostImages/" + props.images[2])}
-        />
-        <SideImage
-          height={props.sideImageHeight}
-          src={require("../../Images/blogPostImages/" + props.images[3])}
-        />
+        {props.images.map((imageName) => (
+          <SideImage
+            height={props.sideImageHeight}
+            src={require("../../Images/blogPostImages/" + imageName)}
+          />
+        ))}
       </section>
     </div>
   );

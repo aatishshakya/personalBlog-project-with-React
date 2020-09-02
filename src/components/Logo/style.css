@@ -1,5 +1,9 @@
 .logo{
-    text-align:center;
+    display:flex;
+    justify-content:center;
+    padding: 5px ; 
+    box-sizing:border-box;
+    
 }
 .logo a{
     
@@ -7,4 +11,8 @@
     font-family: 'Dancing Script', cursive;
     text-decoration:none;
     color:#778439; 
+}
+.logo img{
+    width:10%;
+    height:10%;
 }
